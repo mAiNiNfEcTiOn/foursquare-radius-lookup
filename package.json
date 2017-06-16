@@ -4,10 +4,11 @@
   "description": "Geolocation-based search with configurable radius on Foursquare API",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src",
     "minify-css": "cleancss -o dist/styles.min.css src/styles.css",
-    "transpile": "babel src/scripts.js --presets=es2015 | uglifyjs --compress --mangle > dist/scripts.min.js",
     "prestart": "npm run transpile && npm run minify-css && cp src/index.html dist/",
-    "start": "http-server --cors -a localhost dist/"
+    "start": "http-server --cors -a localhost dist/",
+    "transpile": "babel src/scripts.js --presets=es2015 | uglifyjs --compress --mangle > dist/scripts.min.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,9 @@
     "babel-preset-es2015": "^6.24.1",
     "clean-css": "^4.1.4",
     "clean-css-cli": "^4.1.5",
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
     "http-server": "^0.10.0",
     "uglify-js": "^3.0.17"
   }
