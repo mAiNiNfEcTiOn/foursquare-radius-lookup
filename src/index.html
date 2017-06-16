@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Foursquare App</title>
+  <link href="/styles.min.css" rel="stylesheet" type="text/css" />
+  <script defer src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <script defer src="/scripts.min.js"></script>
+</head>
+<body>
+  <section class="filter">
+    <form>
+      <h2>Filter</h2>
+      <label for="radius">Radius of the search (in meters)</label>
+      <input type="range" id="radius" min="0" max="10000" />
+      <output id="radiusOutput" for="radius"></output> meters
+    </form>
+  </section>
+  <section class="results">
+  </section>
+</body>
+</html>
